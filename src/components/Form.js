@@ -5,7 +5,7 @@ import Checkbox from './Checkbox'
 
 export default function Form (props) {
     return(
-        <div>
+        <div className="email-container">
         <div className="title-holder">
             <h1 className="title">{props.input.title1}</h1>
         </div>
@@ -20,7 +20,7 @@ export default function Form (props) {
                 <Button clickHandler={props.clickHandler} text={'SIGN UP'} />
             </form>
                 <Alert alert={props.alert} />
-                <Checkbox checked={props.checked} checkBoxHandler={props.checkBoxHandler} /> 
+                {/* <Checkbox checked={props.checked} checkBoxHandler={props.checkBoxHandler} />  */}
             </div> 
         </div>
     )
