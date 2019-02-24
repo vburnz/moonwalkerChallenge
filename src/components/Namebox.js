@@ -14,7 +14,8 @@ export default function NameBox (props) {
             }
         ], 
         title1: 'Join the list!',
-        title2: 'Almost Done! Please Enter your first and last name!'
+        title2: 'Almost Done! Please Enter your first and last name!', 
+        buttonText: 'SIGN UP'
     }
     return(
         <Form {...props} input={nameBox} />

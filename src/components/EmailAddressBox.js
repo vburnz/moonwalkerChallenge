@@ -11,7 +11,8 @@ export default function EmailAddressBox (props) {
             }
         ], 
         title1: 'Join the list!',
-        title2: 'SIGN UP FOR THE TLC NEWSLETTER'
+        title2: 'SIGN UP FOR THE TLC NEWSLETTER', 
+        buttonText: 'NEXT'
     }
     return(
         <Form {...props} input={emailAddressBox} />

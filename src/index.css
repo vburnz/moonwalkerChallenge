@@ -321,7 +321,6 @@ border-radius: 5px;;
    font-size: 14px;
    line-height: 20px;
    color: #ccc;
-   text-transform: uppercase;
  }
  h6 {
    color: #aaa;
@@ -1157,22 +1156,30 @@ border-radius: 5px;;
 
  .title { 
   text-align: center; 
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: normal;
   /* line-height: 131px; */
   font-size: 38px;
   color: #B6FDBF;
+  /* margin-left: 10px; 
+  margin-right: 10px;  */
+  padding-right: 15px; 
  
   flex: 2 1 0; 
 
+ }
+
+ .form-div { 
+   /* display: flex; 
+   flex-direction: column;  */
  }
 
  .title-2 { 
   text-align: center; 
   flex: 1 1 0 ; 
 
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: bold;
   line-height: 30px;
@@ -1182,22 +1189,34 @@ border-radius: 5px;;
  }
 
  .title-3{ 
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
+  font-style: normal; 
+  font-weight: 250;
   line-height: normal;
   font-size: 18px;
   text-align: center;
   
   color: #94AEBF;
- }
+ } 
 
  p{ 
    margin: 10px; 
    margin-left: 30px; 
  }
 
- @media (min-width: 576px){
+
+
+.holder { 
+  display: flex; 
+  flex-direction: row; 
+  text-align: left; 
+  flex-wrap: wrap; 
+}
+
+.checkbox-container input { 
+  flex-wrap: wrap; 
+}
+
+@media (min-width: 576px){
   body{ 
     /* background: hotpink;  */
   }
@@ -1207,14 +1226,16 @@ border-radius: 5px;;
   button { 
     flex: 0 0 75px; 
   }
-  .input-box { 
-    flex: 0 0 300px; 
-  }
+  
   .input-container{ 
     flex: 4 0 0 ; 
     margin: 10px; 
   }
 
+  /* .input-box { 
+    flex: 0 0 260px; 
+  } */
+ 
   .email-form{ 
     flex-wrap: nowrap; 
   }
@@ -1225,10 +1246,25 @@ border-radius: 5px;;
   /* .checkbox-container{ 
     flex: 0 0 0; 
   } */
-   
+  
 }
 
+@media (min-width: 480px){ 
+  .holder { 
+    flex-wrap: nowrap;  
+  }
+  /* .email-form{ 
+    flex-wrap: nowrap; 
+  } */
+ 
+  /* .input-box { 
+    flex: 0 0 240px; 
+  } */
+}
 @media (min-width: 768px){
+  .email-container { 
+    flex-wrap: nowrap; 
+  }
  
   body { 
     /* background: green;  */
@@ -1238,9 +1274,14 @@ border-radius: 5px;;
     flex: 5 1 0; 
   }
 
-  /* .title { 
-    line-height: 200px; 
-  } */
+  
+
+  .title { 
+    padding-top: 25px; 
+    font-size: 55px; 
+    margin-right: 20px; 
+    /* line-height: 200px;  */
+  }
   
    
 }
