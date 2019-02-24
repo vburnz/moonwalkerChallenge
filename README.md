@@ -10,3 +10,5 @@ run `npm install`
 run `yarn start`
 navigate to localhost:3000
 
+# Final JSON data will be printed in the browser console
+

@@ -5,8 +5,8 @@ import Button from './Button'
 export default function Form (props) {
     return(
         <form className="form">
-            {props.input.inputs.map(input => (
-                <span className="input-box">
+            {props.input.inputs.map((input, i) => (
+                <span key={`${input.type}-${i}`} className="input-box">
                     <input 
                         className="user-input" 
                         type="text" 

@@ -23,9 +23,7 @@ export default class SignUp extends Component {
         this.setState({[evt.target.name]: evt.target.value})
     }
     checkBoxHandler(evt){ 
-        console.log(evt); 
         this.setState({checked: !this.state.checked})
-        console.log(this.state.checked); 
     }
     emailClickHandler(){ 
         if (this.state.emailAddress !== '' && this.state.checked && this.validateEmail()) { //&& email validation 
@@ -42,7 +40,6 @@ export default class SignUp extends Component {
             console.log({firstName: this.state.firstName, lastName: this.state.lastName, emailAddress: this.state.emailAddress}); 
 
         } else { 
-            console.log('ppp'); 
             this.setState({alert: 'Please enter a first and last name'})
            
         }
@@ -53,6 +50,7 @@ export default class SignUp extends Component {
     }
     render(){
         const emailAddressBox = {
+            type: 'EMAIL',
             inputs : [
                 {
                     name: 'emailAddress', 
@@ -65,6 +63,7 @@ export default class SignUp extends Component {
         }; 
 
         const nameBox = {
+            type: 'NAME',
             inputs : [
                 {
                     name: 'firstName', 
