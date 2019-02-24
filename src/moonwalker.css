@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body { 
+    background: #120F23;
+    margin: 0 auto; 
+}
+
+p {  
+    margin: 10px; 
+    margin-left: 30px; 
+}
+
+#root{ 
+    margin: 10vh 5vw; 
+
+}
+
+.sign-up-container{ 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+}
+
+.checkbox-container { 
+    display: flex; 
+    flex-direction: row; 
+    flex: 2 1 0; 
+    max-width: 400px; 
+}
+
+.checkbox-container p { 
+    font-size: 12px;
+}
+
+.alert { 
+    color: rgb(158, 18, 18)
+}
+
+
+.form { 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+button { 
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 20px;
+    text-align: center;
+
+    color: #FFFFFF;
+    background-color: red; 
+    padding: 10px;
+    border-radius: 5px; 
+    margin: 10px; 
+
+    flex: 1 1 30px; 
+}
+
+.user-input{ 
+    background: rgb(46, 45, 45); 
+    mix-blend-mode: normal;
+    border-radius: 5px;
+    /* font-family: 'Open Sans'; */
+    font-style: normal;
+    font-weight: bold;
+    line-height: 32px;
+    font-size: 26px;
+    margin: 10px; 
+}
+
+.input-container{ 
+    display: flex; 
+    flex-direction: column; 
+    text-align: left; 
+}
+
+.input-box{ 
+    background:rgb(46, 45, 45); 
+    margin: 10px; 
+    flex: 3 1 410px ; 
+    border-radius: 10px; 
+}
+
+.title-holder { 
+    display: flex; 
+    flex: 2 0 0; 
+}
+
+.title { 
+    text-align: center; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    color: #B6FDBF;
+    padding-right: 15px; 
+    flex: 2 1 0; 
+}
+
+.subheader { 
+    text-align: center; 
+    flex: 1 1 0 ; 
+    font-style: normal;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 18px;
+    color: #94AEBF;
+}
+
+.lookout { 
+    font-style: normal; 
+    font-weight: 250;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #94AEBF;
+} 
+
+.holder { 
+    display: flex; 
+    flex-direction: row; 
+    text-align: left; 
+    flex-wrap: wrap; 
+}
+
+
+@media (min-width: 576px){
+
+    button { 
+        flex: 0 0 75px; 
+    }
+
+    .form{ 
+        flex-wrap: nowrap; 
+    }
+
+    .title { 
+        flex: 2 0 0; 
+    }
+
+}
+
+@media (min-width: 480px){ 
+    .holder { 
+        flex-wrap: nowrap;  
+    }
+}
+
+@media (min-width: 768px){
+    .sign-up-container { 
+        flex-wrap: nowrap; 
+    }
+    .title { 
+        padding-top: 25px; 
+        font-size: 50px; 
+        margin-right: 20px; 
+    }
+
+
+}
+

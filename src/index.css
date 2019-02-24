@@ -1,8 +1,13 @@
+
+
+
+
+
 /* Reset.less
  * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800');
- @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+ 
  html,
  body {
    margin: 0;
@@ -170,68 +175,6 @@
    vertical-align: top;
  }
 
-
-
- /* .input-box{ 
-  position: absolute;
-  left: 33.3%;
-  right: 30.18%;
-  top: 40.7%;
-  bottom: 52.96%;
-  
-  background: #FFFFFF;
-  mix-blend-mode: normal;
-  opacity: 0.1;
-  border-radius: 5px;
-  z-index: 0
- } */
-
- /* .email-input { 
-  position: absolute;
-  left: 35.74%;
-  right: 37.79%;
-  top: 41.92%;
-  bottom: 53.58%;
-
-  border-radius: 5px;
-  
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 32px;
-  font-size: 24px;
-
-  
-  
-  color: #94AEBF;
-  
-  mix-blend-mode: normal;
-  opacity: 0.4;
-  z-index: 3;
- } */
-
- /* .red-button{ 
- 
-position: absolute;
-left: 71.78%;
-right: 13.67%;
-top: 40.28%;
-bottom: 52.68%;
-
-background: #ED1F34;
-border-radius: 5px;;
-  
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 24px;
-  font-size: 20px;
-  text-align: center;
-  
-  color: #FFFFFF;
- }
-  */
-
  @keyframes spin {
    0% {
      transform: rotate(0deg);
@@ -349,9 +292,9 @@ border-radius: 5px;;
  input[type="email"],
  input[type="password"],
  textarea {
-   font-size: 14px;
+   font-size: 16px;
    line-height: 20px;
-   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   /* font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif; */
    font-style: 400;
    padding: .75rem 0;
    line-height: 1.5rem !important;
@@ -1057,247 +1000,168 @@ border-radius: 5px;;
  }
 
 
- .email-container{ 
-   display: flex; 
-   flex-direction: row; 
-   flex-wrap: wrap; 
-   /* align-content: center;  */
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
- }
+body { 
+    background: #120F23;
+    margin: 0 auto; 
+}
 
- .checkbox-container{ 
-   display: flex; 
-   flex-direction: row; 
-   flex: 2 1 0; 
+p {  
+    margin: 10px; 
+    margin-left: 30px; 
+}
 
- }
+#root{ 
+    margin: 10vh 5vw; 
 
- .alert{ 
-   color: rgb(158, 18, 18)
- }
+}
 
- .input-container{ 
-   display: flex; 
-   flex-direction: column; 
- 
- }
+.sign-up-container{ 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+}
 
- .email-form{ 
-   display: flex; 
-   flex-direction: row; 
-   justify-content: center; 
-   flex-wrap: wrap; 
- }
+.checkbox-container { 
+    display: flex; 
+    flex-direction: row; 
+    flex: 2 1 0; 
+    max-width: 400px; 
+}
 
- button{ 
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: bold;
-  line-height: 24px;
-  font-size: 20px;
-  text-align: center;
-  
-  color: #FFFFFF;
-   background-color: red; 
-   padding: 10px;
-   border-radius: 5px; 
-   margin: 10px; 
- }
+.checkbox-container p { 
+    font-size: 12px;
+}
 
- .email-input{ 
-  background: rgb(46, 45, 45); 
-  mix-blend-mode: normal;
-  border-radius: 5px;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 22px;
-  font-size: 22px;
-  margin: 10px; 
-
- }
-
- .name-container{ 
-   display: flex; 
-   flex-direction: column; 
-   text-align: left; 
- }
+.alert { 
+    color: rgb(158, 18, 18)
+}
 
 
- button { 
-   flex: 1 1 30px; 
- }
+.form { 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
 
- body { 
-  background: #120F23;
-  margin: 0 auto; 
- }
- 
- #root{ 
-   margin: 10vh 5vw; 
+button { 
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 20px;
+    text-align: center;
 
- }
+    color: #FFFFFF;
+    background-color: red; 
+    padding: 10px;
+    border-radius: 5px; 
+    margin: 10px; 
 
- .input-box{ 
-   background:rgb(46, 45, 45); 
-   margin: 10px; 
-   flex: 3 1 410px ; 
-   border-radius: 10px; 
-  
- 
- }
+    flex: 1 1 30px; 
+}
 
- .title-holder{ 
-   display: flex; 
-   /* flex-direction: row;  */
-   /* align-content: center;  */
-   flex: 2 0 0; 
- }
+.user-input{ 
+    background: rgb(46, 45, 45); 
+    mix-blend-mode: normal;
+    border-radius: 5px;
+    /* font-family: 'Open Sans'; */
+    font-style: normal;
+    font-weight: bold;
+    line-height: 32px;
+    font-size: 26px;
+    margin: 10px; 
+}
 
- .title { 
-  text-align: center; 
-  /* font-family: 'Open Sans'; */
-  font-style: normal;
-  font-weight: normal;
-  /* line-height: 131px; */
-  font-size: 38px;
-  color: #B6FDBF;
-  /* margin-left: 10px; 
-  margin-right: 10px;  */
-  padding-right: 15px; 
- 
-  flex: 2 1 0; 
+.input-container{ 
+    display: flex; 
+    flex-direction: column; 
+    text-align: left; 
+}
 
- }
+.input-box{ 
+    background:rgb(46, 45, 45); 
+    margin: 10px; 
+    flex: 3 1 410px ; 
+    border-radius: 10px; 
+}
 
- .form-div { 
-   /* display: flex; 
-   flex-direction: column;  */
- }
+.title-holder { 
+    display: flex; 
+    flex: 2 0 0; 
+}
 
- .title-2 { 
-  text-align: center; 
-  flex: 1 1 0 ; 
+.title { 
+    text-align: center; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    color: #B6FDBF;
+    padding-right: 15px; 
+    flex: 2 1 0; 
+}
 
-  /* font-family: 'Open Sans'; */
-  font-style: normal;
-  font-weight: bold;
-  line-height: 30px;
-  font-size: 18px;
+.subheader { 
+    text-align: center; 
+    flex: 1 1 0 ; 
+    font-style: normal;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 18px;
+    color: #94AEBF;
+}
 
-  color: #94AEBF;
- }
-
- .title-3{ 
-  font-style: normal; 
-  font-weight: 250;
-  line-height: normal;
-  font-size: 18px;
-  text-align: center;
-  
-  color: #94AEBF;
- } 
-
- p{ 
-   margin: 10px; 
-   margin-left: 30px; 
- }
-
-
+.lookout { 
+    font-style: normal; 
+    font-weight: 250;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #94AEBF;
+} 
 
 .holder { 
-  display: flex; 
-  flex-direction: row; 
-  text-align: left; 
-  flex-wrap: wrap; 
+    display: flex; 
+    flex-direction: row; 
+    text-align: left; 
+    flex-wrap: wrap; 
 }
 
-.checkbox-container input { 
-  flex-wrap: wrap; 
-}
 
 @media (min-width: 576px){
-  body{ 
-    /* background: hotpink;  */
-  }
-  /* button { 
-    flex: 1 1 0; 
-  } */
-  button { 
-    flex: 0 0 75px; 
-  }
-  
-  .input-container{ 
-    flex: 4 0 0 ; 
-    margin: 10px; 
-  }
 
-  /* .input-box { 
-    flex: 0 0 260px; 
-  } */
- 
-  .email-form{ 
-    flex-wrap: nowrap; 
-  }
-  
-  .title { 
-    flex: 2 0 0; 
-  }
-  /* .checkbox-container{ 
-    flex: 0 0 0; 
-  } */
-  
+    button { 
+        flex: 0 0 75px; 
+    }
+
+    .form{ 
+        flex-wrap: nowrap; 
+    }
+
+    .title { 
+        flex: 2 0 0; 
+    }
+
 }
 
 @media (min-width: 480px){ 
-  .holder { 
-    flex-wrap: nowrap;  
-  }
-  /* .email-form{ 
-    flex-wrap: nowrap; 
-  } */
- 
-  /* .input-box { 
-    flex: 0 0 240px; 
-  } */
+    .holder { 
+        flex-wrap: nowrap;  
+    }
 }
+
 @media (min-width: 768px){
-  .email-container { 
-    flex-wrap: nowrap; 
-  }
- 
-  body { 
-    /* background: green;  */
-  }
-  
-  .input-container{ 
-    flex: 5 1 0; 
-  }
+    .sign-up-container { 
+        flex-wrap: nowrap; 
+    }
+    .title { 
+        padding-top: 25px; 
+        font-size: 50px; 
+        margin-right: 20px; 
+    }
 
-  
 
-  .title { 
-    padding-top: 25px; 
-    font-size: 55px; 
-    margin-right: 20px; 
-    /* line-height: 200px;  */
-  }
-  
-   
 }
-   
-  @media (min-width: 1024px){
-   
-    body{ 
-      background: yellow; 
-    }
-   
-  }
-   
-  @media (min-width: 1200px){
-   
-    body { 
-      background: blue; 
-    }
-   
-  }
+

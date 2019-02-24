@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import EmailAddressBox from './EmailAddressBox'
-import NameBox from './Namebox'
+import InputBox from './InputBox'
 import Thanks from './Thanks'
 
 export default class SignUp extends Component { 
@@ -53,13 +52,54 @@ export default class SignUp extends Component {
         return re.test(String(this.state.emailAddress).toLowerCase());
     }
     render(){
+        const emailAddressBox = {
+            inputs : [
+                {
+                    name: 'emailAddress', 
+                    placeholder: 'Enter email address'
+                }
+            ], 
+            title1: 'Join the list!',
+            title2: 'SIGN UP FOR THE TLC NEWSLETTER', 
+            buttonText: 'NEXT'
+        }; 
+
+        const nameBox = {
+            inputs : [
+                {
+                    name: 'firstName', 
+                    placeholder: 'First Name'
+                }, 
+                {
+                    name: 'lastName', 
+                    placeholder: 'Last Name'
+                }
+            ], 
+            title1: 'Join the list!',
+            title2: 'ALMOST DONE! PLEASE ENTER YOUR FIRST AND LAST NAME.', 
+            buttonText: 'SIGN UP'
+        }
+
         return(
             <div>
-                {this.state.stage === 'ENTER_EMAIL' ?  <EmailAddressBox {...this.state} inputHandler={this.inputHandler} checkBoxHandler={this.checkBoxHandler} clickHandler={this.emailClickHandler}/> : null }
-                {this.state.stage === 'ENTER_NAME' ? <NameBox {...this.state} inputHandler={this.inputHandler} clickHandler={this.nameClickHandler}/> : null }
+                {this.state.stage === 'ENTER_EMAIL' ?  <InputBox 
+                                                            {...this.state} 
+                                                            input ={emailAddressBox} 
+                                                            inputHandler={this.inputHandler} 
+                                                            checkBoxHandler={this.checkBoxHandler} 
+                                                            clickHandler={this.emailClickHandler}
+                                                        /> 
+                                                    : null 
+                }
+                {this.state.stage === 'ENTER_NAME' ? <InputBox 
+                                                        {...this.state} 
+                                                        input={nameBox} 
+                                                        inputHandler={this.inputHandler} 
+                                                        clickHandler={this.nameClickHandler}
+                                                    /> 
+                                                    : null 
+                }
                 {this.state.stage === 'COMPLETE' ? <Thanks /> : null } 
-               
-               
             </div>
         )
     }
